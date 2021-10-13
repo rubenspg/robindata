@@ -2,7 +2,7 @@
 
 Robindata is a simple command line tool written in Python to interact with [Robinhood](https://robinhood.com) app.
 
-There are some useful commands like:
+There are some useful commands to do:
 1) Export all your transactions to a CSV file;
 2) Show the performance of your portfolio or trades (per a given period of time);
 
@@ -19,10 +19,16 @@ There are some useful commands like:
 1) Clone this repository
 
 ```sh
-$ git clone ...
+$ git clone https://github.com/rubenspg/robindata.git
 ```
 
 2) Enter in the source code directory and install right from the source (or via pip from PyPI):
+
+```sh
+$ pyenv virtualenv 3.9.7 robindata
+$ pyenv local robindata
+$ pip install -r requirements.txt
+```
 
 ```sh
 $ python setup.py install
@@ -35,6 +41,7 @@ $ python setup.py install
 The following command will connect to Robinhood and export all your transactions to a CSV file and store it in your local directory.
 
 ```sh
+$ robindata login
 $ robindata export-transactions
 ```
 
